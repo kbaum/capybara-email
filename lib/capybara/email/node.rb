@@ -3,6 +3,8 @@ class Capybara::Email::Node < Capybara::Driver::Node
     native.text
   end
 
+  alias_method :all_text, :text
+
   def [](name)
     string_node[name]
   end
