@@ -19,6 +19,7 @@ feature 'Integration test' do
     current_email.click_link 'example'
     page.should have_content 'Hello world!'
     current_email.should have_content 'This is only a html test'
+    current_email.should have_css 'a'
 
     all_emails.first.should eq email
 
